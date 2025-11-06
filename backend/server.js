@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-
+const authRouter = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -18,6 +18,8 @@ app.use(morgan('dev'));
 
 // root
 app.get('/', (req, res) => res.json({ message: 'Vibe Cart Backend' }));
+
+app.use('/api/auth', authRouter);
 
 // error handler
 app.use((err, req, res, next) => {
