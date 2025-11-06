@@ -1,0 +1,160 @@
+
+:root {
+  --accent: #5eff00; /* base orange tone */
+  --accent-dark: #1ac100; /* darker hover version */
+  --bg: #f8fafc;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --radius: 10px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --max-width: 1500px;
+}
+
+/* Page layout */
+.products-page{
+  padding: 24px;
+  background: var(--bg);
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-page > h1{
+  margin: 0 0 18px 0;
+  font-size: 28px;
+  letter-spacing: -0.2px;
+}
+
+/* Messages */
+.loading-text,
+.empty-text{
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 18px;
+}
+
+/* Grid row */
+.products-row{
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  max-width: var(--max-width);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  align-items: start;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Product card */
+.product-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+/* Hover / focus */
+.product-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 10px 22px 30px rgba(37, 255, 13, 0.12);
+}
+
+/* Image container to keep consistent heights */
+.product-image{
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: block;
+  align-self: center;
+}
+
+/* Product text block */
+.product-name{
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.25;
+  min-height: 42px; /* keeps cards aligned even with different title lengths */
+  color: #22652b;
+}
+
+/* Price */
+.product-price{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+/* Description (clamp to 3 lines) */
+.product-desc{
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 40px;
+}
+
+/* Footer area with button + sku */
+.product-footer{
+  margin-top: auto; /* push footer to bottom */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Add to cart button */
+.btn-add{
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 6px 14px rgba(230,90,0,0.14);
+  transition: background 140ms ease, transform 120ms ease;
+}
+
+.btn-add:hover{ background: var(--accent-dark); transform: translateY(-2px); }
+.btn-add:active{ transform: translateY(0); }
+
+/* SKU */
+.product-sku{
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px){
+  .product-image{ height: 160px; }
+  .product-card{ padding: 10px; min-height: 300px; }
+  .products-page{ padding: 14px; }
+  .products-page > h1{ font-size: 22px; }
+}
+
+/* Accessibility focus ring for keyboard users */
+.product-card:focus-within{
+  outline: 3px solid rgba(116, 241, 99, 0.12);
+  outline-offset: 2px;
+}

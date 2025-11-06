@@ -1,0 +1,80 @@
+[
+  { 
+    "name": "Vibe Tee", 
+    "price": 299, 
+    "description": "Stay cool and comfy with our Vibe Tee — crafted from ultra-soft cotton for everyday wear.", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ_bTmMh_KEz8SzkdbDzNYNgu8Nq3SGt5AcE5yvvP7M3Vkjqufs3TghKt5uc0gVxCHptGhg3cCDuAOpkeBi7NNozPwSRy12cnRWQp2ujnKxFZhoQpvmCKBa", 
+    "sku": "VIBE-TEE-01" 
+  },
+  { 
+    "name": "Vibe Mug", 
+    "price": 199, 
+    "description": "Start your day right with the Vibe Mug — a sturdy 11oz ceramic mug designed for comfort. ", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfS0YRI0JgWFHUHrxLEuxvUwP87YvBxXiytiz2bDj-GjbR7In3_qpgrdmAx9JxsQHRMmIbKou9p0N7c0xsqV6UMpOmj2OvjUcTJd_asSohYx_eUWbqXLCI", 
+    "sku": "VIBE-MUG-01" 
+  },
+  { 
+    "name": "Vibe Cap", 
+    "price": 249, 
+    "description": "Top off your look with the Vibe Cap — lightweight, breathable, and fully adjustable for all-day comfort.", 
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSbrskXW0dagBI7H6K4xRjY_Xu7-yFRf4gezYhyt9pzK4qNmOZHLRmWZKb9UjCkLI6naL7cSDxPL-aEJILC63Zza-lN8mrbScQpGm0S3YVnzxyMh8L4iRnA", 
+    "sku": "VIBE-CAP-01" 
+  },
+  { 
+    "name": "Vibe Tote", 
+    "price": 349, 
+    "description": "Carry positivity everywhere with the eco-friendly Vibe Tote. This is very comfortable bag. ", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQQxRFpmksf47S_yUys_JjMyWFtxmeaROSLQGfwG9xf7ySN7OECOxhaOi9i5LWb0MifUEmJdTBGgri0ImoEu96cmgCkKI30N6R6fMStqi_S1wIiR6qEuJFa", 
+    "sku": "VIBE-TOTE-01" 
+  },
+  { 
+    "name": "Vibe Sticker Pack", 
+    "price": 99, 
+    "description": "Express your vibe with this fun sticker pack! Includes 6 high-quality, waterproof stickers .", 
+    "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSSBSBRTaD--eBkyNYrZm89CEYgutHhhabR-vIPkyQmzfMdTEc8X3tBr2NaDYV3gaC_eVmQ0uankR_6NqEdWanSj_jn7wOWGqpl_Ih6jII6goHCbQH02V_Ggg", 
+    "sku": "VIBE-STK-01" 
+  },
+  { 
+    "name": "Vibe Phone Stand", 
+    "price": 179, 
+    "description": "Keep your phone steady with the Vibe Stand — a compact, foldable, and durable design made for convenience.", 
+    "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQONCKnLWu0zyM1AK1MeSoZvumMVfzaUryCvPJwLWRetC6C4qrI4se5iuaz2hJnDqqg71UE95ppgZwIzKzRD8ZjiQCdE-qzwTJID9904Gk", 
+    "sku": "VIBE-PS-01" 
+  },
+  { 
+    "name": "Vibe Hoodie", 
+    "price": 899, 
+    "description": "Wrap yourself in comfort with the Vibe Hoodie — made from premium cotton fleece for a cozy yet stylish feel. Perfect for cool evenings, casual outings, or just lounging with style.", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTC1c4EkZRQ2y5PNrwR34R5_odqYwd_n0_u61ohn4VRXvZlBvtU6MLvuuz0n5mCrsNEiB8_7wKuqQ4f5tMzrHnp2If0_2yADhwyPcfXs98ZY1oajiXmZy0m", 
+    "sku": "VIBE-HOOD-01" 
+  },
+   { 
+    "name": "Vibe Tee", 
+    "price": 299, 
+    "description": "Stay cool and comfy with our Vibe Tee — crafted from ultra-soft cotton for everyday wear.", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ_bTmMh_KEz8SzkdbDzNYNgu8Nq3SGt5AcE5yvvP7M3Vkjqufs3TghKt5uc0gVxCHptGhg3cCDuAOpkeBi7NNozPwSRy12cnRWQp2ujnKxFZhoQpvmCKBa", 
+    "sku": "VIBE-TEE-01" 
+  },
+  { 
+    "name": "Vibe Mug", 
+    "price": 199, 
+    "description": "Start your day right with the Vibe Mug — a sturdy 11oz ceramic mug designed for comfort. ", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfS0YRI0JgWFHUHrxLEuxvUwP87YvBxXiytiz2bDj-GjbR7In3_qpgrdmAx9JxsQHRMmIbKou9p0N7c0xsqV6UMpOmj2OvjUcTJd_asSohYx_eUWbqXLCI", 
+    "sku": "VIBE-MUG-01" 
+  },
+  { 
+    "name": "Vibe Cap", 
+    "price": 249, 
+    "description": "Top off your look with the Vibe Cap — lightweight, breathable, and fully adjustable for all-day comfort.", 
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSbrskXW0dagBI7H6K4xRjY_Xu7-yFRf4gezYhyt9pzK4qNmOZHLRmWZKb9UjCkLI6naL7cSDxPL-aEJILC63Zza-lN8mrbScQpGm0S3YVnzxyMh8L4iRnA", 
+    "sku": "VIBE-CAP-01" 
+  },
+  { 
+    "name": "Vibe Tote", 
+    "price": 349, 
+    "description": "Carry positivity everywhere with the eco-friendly Vibe Tote. This is very comfortable bag. ", 
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQQxRFpmksf47S_yUys_JjMyWFtxmeaROSLQGfwG9xf7ySN7OECOxhaOi9i5LWb0MifUEmJdTBGgri0ImoEu96cmgCkKI30N6R6fMStqi_S1wIiR6qEuJFa", 
+    "sku": "VIBE-TOTE-01" 
+  }
+]
+

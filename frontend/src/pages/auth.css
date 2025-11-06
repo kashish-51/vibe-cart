@@ -1,0 +1,199 @@
+/* container that keeps card centered and allows small screens to scroll */
+.auth-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  min-height: 100vh; /* ensures vertical centering */
+  box-sizing: border-box;
+}
+
+/* ---------- Card ---------- */
+.auth-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: clamp(18px, 4.2vw, 36px);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  overflow: hidden;
+
+  /* keep your desktop layout */
+  margin-left: 30rem;
+  margin-top: 20vh;
+}
+
+/* ---------- Responsive behavior ---------- */
+
+/* On smaller screens, center the card and remove fixed margins */
+@media (max-width: 1199px) {
+  .auth-wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .auth-card {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* ---------- Hover ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .auth-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(23, 255, 124, 0.1);
+  }
+}
+
+/* ---------- Heading ---------- */
+.auth-card h2 {
+  margin: 0 0 14px 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: inherit;
+  font-weight: 600;
+}
+
+/* ---------- Form ---------- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.8vw, 14px);
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-card input,
+.auth-card .btn,
+.auth-card .link,
+.auth-card button[type="button"] {
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.6vw, 1rem);
+}
+
+/* ---------- Inputs ---------- */
+.auth-card input {
+  width: 100%;
+  padding: clamp(10px, 2.2vw, 14px);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  color: #0f172a;
+}
+
+.auth-card input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--input-focus);
+  outline: none;
+}
+
+.auth-card input::placeholder {
+  color: #9ca3af;
+}
+
+/* ---------- Animated name field ---------- */
+.name-animate {
+  animation: fadeIn 220ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: clamp(10px, 2.2vw, 12px);
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- Links & Text ---------- */
+.link {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 6px;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+.muted {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.error {
+  color: var(--danger);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* ---------- Larger Screen Enhancements ---------- */
+@media (min-width: 720px) {
+  .auth-card .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .auth-card {
+    max-width: 640px;
+    padding: clamp(22px, 2.6vw, 48px);
+  }
+}
+
+/* ---------- Small Screens ---------- */
+@media (max-width: 480px) {
+  .auth-card {
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(16,24,40,0.06);
+  }
+  .auth-card h2 { font-size: 1.25rem; }
+  .btn { min-height: 48px; font-size: 0.98rem; }
+}
+
+/* ---------- Utilities ---------- */
+.text-center { text-align: center; }
+.small { font-size: 0.85rem; color: var(--muted); }
+
+.auth-card:focus-within { transform: translateY(-2px); }
+.card { display: block; }

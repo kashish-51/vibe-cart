@@ -1,0 +1,219 @@
+/* 🌿 ROOT VARIABLES */
+:root {
+  --surface: #fff;
+  --border: #e6e6e6;
+  --text: #111;
+  --muted-2: #555;
+  --accent: #228B22;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 🌿 NAVBAR WRAPPER */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 🌿 CENTER CONTAINER (behaves like Amazon layout) */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100rem;          /* ✅ fixed wide width */
+  max-width: 100%;        /* prevents overflow */
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+}
+
+/* 🌿 BRAND LOGO */
+.navbar-brand {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.navbar-brand:hover {
+  color: var(--accent);
+}
+.brand-icon {
+  font-size: 1.3rem;
+}
+
+/* 🌿 LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  transition: all 0.3s ease;
+}
+.nav-link {
+  color: var(--muted-2);
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent);
+}
+
+/* 🌿 CART BADGE */
+.nav-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.cart-badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  box-shadow: 0 0 4px rgba(93, 255, 136, 0.2);
+}
+
+/* 🌿 AUTH SECTION */
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-user {
+  color: var(--muted-2);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.logout-btn {
+  background: #c6c600;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.logout-btn:hover {
+  background: var(--accent);
+}
+
+/* 🌿 MENU TOGGLE (MOBILE BURGER) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ---------------------- 🌿 RESPONSIVE MAGIC ---------------------- */
+
+/* 💻 For screens ≤ 1200px (Laptop) */
+@media (max-width: 1200px) {
+  .navbar-inner {
+    width: 90%; /* reduce fixed width */
+  }
+}
+
+/* 📱 For screens ≤ 768px (Tablet + Mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .navbar-inner {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    width: 240px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-radius: 8px 0 0 8px;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navbar-links.open {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  .nav-auth {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}
+
+/* 📱 For very small screens ≤ 480px */
+@media (max-width: 480px) {
+  .navbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+    top: 55px;
+    border-radius: 0;
+  }
+
+  .nav-user {
+    display: none;
+  }
+}
